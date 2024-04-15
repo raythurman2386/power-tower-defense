@@ -12,6 +12,11 @@ const config = {
   height: 768,
   parent: "game-container",
   backgroundColor: "#028af8",
+  pixelArt: true,
+  physics: {
+    arcade: true,
+    debug: false,
+  },
   scale: {
     mode: Phaser.Scale.FIT,
     autoCenter: Phaser.Scale.CENTER_BOTH,
