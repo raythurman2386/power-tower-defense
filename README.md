@@ -1,113 +1,65 @@
-# Phaser Webpack Template
+# PowerTowerDefense
 
-This is a Phaser 3 project template that uses webpack for bundling. It supports hot-reloading for quick development workflow and includes scripts to generate production-ready builds.
+![PowerTowerDefense Logo](logo.png)
 
-**[This Template is also available as a TypeScript version.](https://github.com/phaserjs/template-webpack-ts)**
+"PowerTowerDefense" is an electrifying tower defense game built with the Phaser framework for the gamedevjs challenge. In this game, players must defend their main tower against waves of enemies by strategically placing defensive towers and collecting power orbs to upgrade their defenses.
 
-### Versions
+## Gameplay
 
-This template has been updated for:
+- Place defensive towers around your main tower to combat enemy waves
+- Collect power orbs dropped by defeated enemies
+- Upgrade your defensive towers and main tower using the collected power orbs
+- Unlock new abilities and enhancements for your towers as you progress
+- Adapt your strategy to overcome increasingly challenging enemy waves
 
-- [Phaser 3.80.1](https://github.com/phaserjs/phaser)
-- [Webpack 5.90.3](https://github.com/webpack/webpack)
+## Features
 
-![screenshot](screenshot.png)
+- Engaging tower defense gameplay with a unique power collection mechanic
+- Diverse range of defensive towers with distinct abilities and upgrade paths
+- Main tower upgrades that provide special abilities and enhancements
+- Immersive visual effects and animations
+- Leaderboards to compete with other players for the highest scores
 
-## Requirements
+## Installation
 
-[Node.js](https://nodejs.org) is required to install dependencies and run scripts via `npm`.
+1. Clone the repository:
 
-## Available Commands
+   ```
+   git clone https://github.com/raythurman2386/power-tower-defense.git
+   ```
 
-| Command | Description |
-|---------|-------------|
-| `npm install` | Install project dependencies |
-| `npm run dev` | Launch a development web server |
-| `npm run build` | Create a production build in the `dist` folder |
+2. Install the dependencies:
 
-## Writing Code
+   ```
+   cd power-tower-defense
+   npm install
+   ```
 
-After cloning the repo, run `npm install` from your project directory. Then, you can start the local development server by running `npm run dev`.
+3. Start the development server:
 
-The local development server runs on `http://localhost:8080` by default. Please see the webpack documentation if you wish to change this, or add SSL support.
+   ```
+   npm start
+   ```
 
-Once the server is running you can edit any of the files in the `src` folder. Webpack will automatically recompile your code and then reload the browser.
+4. Open your browser and visit `http://localhost:8080` to play the game.
 
-## Template Project Structure
+## Controls
 
-We have provided a default project structure to get you started. This is as follows:
+- Use the mouse to place defensive towers on the game grid
+- Click on a tower to view its upgrade options
+- Collect power orbs by hovering over them with the mouse
 
-- `index.html` - A basic HTML page to contain the game.
-- `src` - Contains the game source code.
-- `src/main.js` - The main entry point. This contains the game configuration and starts the game.
-- `src/scenes/` - The Phaser Scenes are in this folder.
-- `public/style.css` - Some simple CSS rules to help with page layout.
-- `public/assets` - Contains the static assets used by the game.
+## Technologies Used
 
-## Handling Assets
+- Phaser framework
+- JavaScript
+- HTML5
+- CSS3
 
-Webpack supports loading assets via JavaScript module `import` statements.
+## Contributing
 
-This template provides support for both embedding assets and also loading them from a static folder. To embed an asset, you can import it at the top of the JavaScript file you are using it in:
+Contributions are welcome! If you find any bugs or have suggestions for improvements, please open an issue or submit a pull request.
 
-```js
-import logoImg from './assets/logo.png'
-```
+## License
 
-To load static files such as audio files, videos, etc place them into the `public/assets` folder. Then you can use this path in the Loader calls within Phaser:
-
-```js
-preload ()
-{
-    //  This is an example of an imported bundled image.
-    //  Remember to import it at the top of this file
-    this.load.image('logo', logoImg);
-
-    //  This is an example of loading a static image
-    //  from the public/assets folder:
-    this.load.image('background', 'assets/bg.png');
-}
-```
-
-When you issue the `npm run build` command, all static assets are automatically copied to the `dist/assets` folder.
-
-## Deploying to Production
-
-After you run the `npm run build` command, your code will be built into a single bundle and saved to the `dist` folder, along with any other assets your project imported, or stored in the public assets folder.
-
-In order to deploy your game, you will need to upload *all* of the contents of the `dist` folder to a public facing web server.
-
-## Customizing the Template
-
-### Babel
-
-You can write modern ES6+ JavaScript and Babel will transpile it to a version of JavaScript that you want your project to support. The targeted browsers are set in the `.babelrc` file and the default currently targets all browsers with total usage over "0.25%" but excludes IE11 and Opera Mini.
-
- ```
-"browsers": [
-  ">0.25%",
-  "not ie 11",
-  "not op_mini all"
-]
- ```
-
-### Webpack
-
-If you want to customize your build, such as adding a new webpack loader or plugin (i.e. for loading CSS or fonts), you can modify the `webpack/config.js` file for cross-project changes, or you can modify and/or create new configuration files and target them in specific npm tasks inside of `package.json`. Please see the [Webpack documentation](https://webpack.js.org/) for more information.
-
-## Join the Phaser Community!
-
-We love to see what developers like you create with Phaser! It really motivates us to keep improving. So please join our community and show-off your work 😄
-
-**Visit:** The [Phaser website](https://phaser.io) and follow on [Phaser Twitter](https://twitter.com/phaser_)<br />
-**Play:** Some of the amazing games [#madewithphaser](https://twitter.com/search?q=%23madewithphaser&src=typed_query&f=live)<br />
-**Learn:** [API Docs](https://newdocs.phaser.io), [Support Forum](https://phaser.discourse.group/) and [StackOverflow](https://stackoverflow.com/questions/tagged/phaser-framework)<br />
-**Discord:** Join us on [Discord](https://discord.gg/phaser)<br />
-**Code:** 2000+ [Examples](https://labs.phaser.io)<br />
-**Read:** The [Phaser World](https://phaser.io/community/newsletter) Newsletter<br />
-
-Created by [Phaser Studio](mailto:support@phaser.io). Powered by coffee, anime, pixels and love.
-
-The Phaser logo and characters are &copy; 2011 - 2024 Phaser Studio Inc.
-
-All rights reserved.
+This project is licensed under the [MIT License](LICENSE).
