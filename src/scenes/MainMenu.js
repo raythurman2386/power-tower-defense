@@ -6,6 +6,8 @@ export class MainMenu extends Scene {
   }
 
   create() {
+    const storageManager = this.game.storageManager;
+
     this.add.image(512, 384, "background");
 
     this.add.image(512, 300, "logo");
